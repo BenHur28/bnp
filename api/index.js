@@ -16,12 +16,12 @@ app.use(
 
 mongoose.connect(process.env.MONGO_URL);
 
-app.get("/player/:name", async (req, res) => {
+app.get("/api/player/:name", async (req, res) => {
 	const { name } = req.params;
 	res.json(await PlayerModel.findOne({ name: name }));
 });
 
-app.get("/event/:event", async (req, res) => {
+app.get("/api/event/:event", async (req, res) => {
 	const { event } = req.params;
 	res.json(await PlayerModel.find({ events: event }));
 });
