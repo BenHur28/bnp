@@ -7,6 +7,7 @@ import PastEventPage from "./pages/PastEventPage";
 import CharacterTips from "./pages/CharacterTips";
 import PlayerPage from "./pages/PlayerPage";
 import PastEventPlayers from "./pages/PastEventPlayers";
+import SingleCharPage from "./pages/SingleCharPage";
 
 axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
 axios.defaults.withCredentials = true;
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
 	{
 		path: "/character",
 		element: <CharacterTips />,
+	},
+	{
+		path: "/character/:name",
+		element: <SingleCharPage />,
 	},
 	{
 		path: "/player/:name",

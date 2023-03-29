@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 const PastEventPlayers = () => {
 	const { event } = useParams();
-	console.log(event);
 	const [listOfPlayers, setListOfPlayers] = useState([]);
 
 	useEffect(() => {
