@@ -1,0 +1,10 @@
+{
+    "outoutDirectory": "client/dist",
+    "framework": "vite",
+    "rewrites": [
+        {
+        "source":"/api/(.*)",
+        "destination": "/api/index.js"
+        }
+    ]
+}
