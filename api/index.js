@@ -21,4 +21,9 @@ app.get("/player/:name", async (req, res) => {
 	res.json(await PlayerModel.findOne({ name: name }));
 });
 
+app.get("/event/:event", async (req, res) => {
+	const { event } = req.params;
+	res.json(await PlayerModel.find({ events: event }));
+});
+
 app.listen(3000);

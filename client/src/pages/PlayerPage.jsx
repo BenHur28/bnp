@@ -20,7 +20,7 @@ const PlayerPage = () => {
 	return (
 		<div className="h-screen w-screen">
 			<Navbar />
-			<h1 className="text-2xl text-center font-bold mt-4"> {player.name}</h1>
+			<h1 className="text-3xl text-center font-bold mt-4"> {player.name}</h1>
 			<div className="h-1/2 mt-10">
 				<iframe
 					className="mx-auto aspect-video rounded-2xl lg:w-1/3 lg:h-3/4 md:w-1/2 md:h-3/4 sm:w-1/2 sm: h-1/2 relative top-10"
@@ -49,7 +49,7 @@ const PlayerPage = () => {
 					<li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem aspernatur fugit laudantium iste consequuntur perferendis</li>
 				</ol>
 			</div>
-			<div className="lg:w-1/2 md:w-1/2 sm: w-2/3 mx-auto text-left mb-6">
+			<div className="lg:w-1/2 md:w-1/2 sm: w-2/3 mx-auto text-left mb-6 pb-10">
 				<h2 className="text-2xl text-center font-bold mb-3 ">GRD</h2>
 				<ol className="list-outside list-disc">
 					<li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem aspernatur fugit laudantium iste consequuntur perferendis</li>

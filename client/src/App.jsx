@@ -6,6 +6,7 @@ import CurrentEventPage from "./pages/CurrentEventPage";
 import PastEventPage from "./pages/PastEventPage";
 import CharacterTips from "./pages/CharacterTips";
 import PlayerPage from "./pages/PlayerPage";
+import PastEventPlayers from "./pages/PastEventPlayers";
 
 axios.defaults.baseURL = "http://127.0.0.1:3000";
 axios.defaults.withCredentials = true;
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
 	{
 		path: "/past",
 		element: <PastEventPage />,
+	},
+	{
+		path: "/past/:event",
+		element: <PastEventPlayers />,
 	},
 	{
 		path: "/character",

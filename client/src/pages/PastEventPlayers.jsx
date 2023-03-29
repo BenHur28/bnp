@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "../componenets/Navbar";
-import { Link } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-const CurrentEventPage = () => {
-	const event = "dreamhack";
+const PastEventPlayers = () => {
+	const { event } = useParams();
+	console.log(event);
 	const [listOfPlayers, setListOfPlayers] = useState([]);
 
 	useEffect(() => {
-		axios.get(`/event/${event}`, event).then(({ data }) => {
+		axios.get(`/event/${event}`).then(({ data }) => {
 			setListOfPlayers(data);
 		});
-	}, []);
+	}, [event]);
 
 	return (
 		<div>
@@ -29,4 +31,4 @@ const CurrentEventPage = () => {
 	);
 };
 
-export default CurrentEventPage;
+export default PastEventPlayers;
