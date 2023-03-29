@@ -10,6 +10,7 @@ const PastEventPage = () => {
 				<h1 className="text-2xl underline font-bold">Past Events</h1>
 				<Link to={"/past/crossover"}>Crossover Arc 2023</Link>
 				<Link to={"/past/slashback"}>Slashback 2023</Link>
+				<Link to={"/past/frosty"}>Frosty Fausting 2023</Link>
 			</div>
 		</div>
 	);
