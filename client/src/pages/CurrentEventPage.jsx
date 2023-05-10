@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const CurrentEventPage = () => {
-	const event = "dreamhack";
+	const event = "combobreaker";
 	const [listOfPlayers, setListOfPlayers] = useState([]);
 
 	useEffect(() => {
@@ -17,10 +17,10 @@ const CurrentEventPage = () => {
 		<div>
 			<Navbar />
 			<div className="mt-4 text-center flex flex-col gap-2">
-				<h1 className="text-center text-2xl mb-4">List of Players:</h1>
+				<h1 className="text-2xl underline font-bold">List of Players:</h1>
 				{listOfPlayers?.length > 0 &&
 					listOfPlayers.map((player, index) => (
-						<Link to={`/player/${player.name}`} className="text-lg underline" key={index}>
+						<Link to={`/player/${player.name}`} className="text-lg underline mx-auto" key={index}>
 							{player.name}
 						</Link>
 					))}

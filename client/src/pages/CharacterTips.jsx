@@ -16,10 +16,10 @@ const CharacterTips = () => {
 		<div>
 			<Navbar />
 			<div className="mt-4 text-center flex flex-col gap-2">
-				<h1 className="text-center text-2xl mb-4">List of Characters:</h1>
+				<h1 className="text-2xl underline font-bold">List of Characters:</h1>
 				{listOfChars?.length > 0 &&
 					listOfChars.map((chars, index) => (
-						<Link to={`/character/${chars.name}`} key={index} className="text-lg underline">
+						<Link to={`/character/${chars.name}`} key={index} className="text-lg underline mx-auto">
 							{chars.name}
 						</Link>
 					))}
